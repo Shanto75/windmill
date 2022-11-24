@@ -4,7 +4,10 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        'x':5
+    }
+    return render(request, 'index.html', context)
     # return HttpResponse('this is home page')
 
 def about(request):
