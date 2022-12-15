@@ -3,4 +3,14 @@
 
 {% block body %}
 <h1 class="text-center">{{title}}</h1>
+
+<div class="container">
+    <form method="post" action="/about">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">About</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </form>
+</div>
 {% endblock body %}
