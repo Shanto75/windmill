@@ -5,10 +5,14 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        'x':5
+        'title': 'Welcome to home page'
     }
     return render(request, 'index.html', context)
     # return HttpResponse('this is home page')
 
 def about(request):
-    return HttpResponse('this is about page')
+    context = {
+        'title': 'About Us'
+    }
+    return render(request, 'about.html', context)
+    # return HttpResponse('this is about page')
