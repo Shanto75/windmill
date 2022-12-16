@@ -14,4 +14,16 @@
         <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>
+
+<div class="container pt-5">
+    <h5>All the abouts</h5>
+    {% for about in  abouts%}
+    <ul>
+        <li>
+            {{ about }}
+        </li>
+    </ul>
+    {% endfor %}
+</div>
+
 {% endblock body %}
