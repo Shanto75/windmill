@@ -8,9 +8,10 @@
     <form method="post" action="/about">
         {% csrf_token %}
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">About</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="about" class="form-label">About</label>
+            <textarea name="about" class="form-control" id="about" rows="3"></textarea>
         </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>
 {% endblock body %}
